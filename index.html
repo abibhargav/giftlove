@@ -1,235 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I Love You Subbi 💖</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Love You Subbi 💖</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap"
-        rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        body {
-            min-height: 100vh;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #ffd6e8, #ffe6f2);
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
+body {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffd6e8, #ffe6f2);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
 
-        /* Floating Hearts */
-        .heart {
-            position: fixed;
-            bottom: -10px;
-            color: #ff4d88;
-            font-size: 20px;
-            animation: floatUp linear infinite;
-            opacity: 0.7;
-        }
+/* Floating Hearts */
+.heart {
+  position: fixed;
+  bottom: -10px;
+  color: #ff4d88;
+  font-size: 20px;
+  animation: floatUp linear infinite;
+  opacity: 0.7;
+}
 
-        @keyframes floatUp {
-            to {
-                transform: translateY(-110vh);
-                opacity: 0;
-            }
-        }
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
 
-        /* Main Box */
-        .container {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 30px 20px;
-            border-radius: 25px;
-            max-width: 420px;
-            width: 100%;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            z-index: 2;
-        }
+/* Main Box */
+.container {
+  background: rgba(255,255,255,0.9);
+  padding: 30px 20px;
+  border-radius: 25px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  z-index: 2;
+}
 
-        h4 {
-            color: #ff4d88;
-            font-weight: 400;
-            margin-bottom: 10px;
-        }
+h4 {
+  color: #ff4d88;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
 
-        h1 {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            color: #e6005c;
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-        }
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: #e6005c;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
 
-        button {
-            background: linear-gradient(45deg, #ff4d88, #ff99cc);
-            border: none;
-            padding: 12px 28px;
-            font-size: 1rem;
-            color: white;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+button {
+  background: linear-gradient(45deg, #ff4d88, #ff99cc);
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-        button:hover {
-            transform: scale(1.07);
-            box-shadow: 0 10px 25px rgba(255, 77, 136, 0.5);
-        }
+button:hover {
+  transform: scale(1.07);
+  box-shadow: 0 10px 25px rgba(255, 77, 136, 0.5);
+}
 
-        /* Popup */
-        .popup {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.45);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 10;
-        }
+/* Popup */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
 
-        .card {
-            background: #fff0f6;
-            padding: 25px;
-            border-radius: 25px;
-            width: 90%;
-            max-width: 350px;
-            animation: pop 0.4s ease;
-        }
+.card {
+  background: #fff0f6;
+  padding: 25px;
+  border-radius: 25px;
+  width: 90%;
+  max-width: 350px;
+  animation: pop 0.4s ease;
+}
 
-        @keyframes pop {
-            from {
-                transform: scale(0.6);
-                opacity: 0;
-            }
+@keyframes pop {
+  from { transform: scale(0.6); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
 
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
+.card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ff99cc;
+  margin-bottom: 15px;
+}
 
-        .card img {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #ff99cc;
-            margin-bottom: 15px;
-        }
+.card h2 {
+  font-family: 'Pacifico', cursive;
+  color: #ff1a75;
+  margin-bottom: 10px;
+}
 
-        .card h2 {
-            font-family: 'Pacifico', cursive;
-            color: #ff1a75;
-            margin-bottom: 10px;
-        }
+.card p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
 
-        .card p {
-            color: #444;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
+.close {
+  margin-top: 20px;
+  background: #ff4d88;
+}
 
-        .close {
-            margin-top: 20px;
-            background: #ff4d88;
-        }
+/* Confetti */
+.confetti {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  top: -10px;
+  animation: fall linear infinite;
+  z-index: 20;
+}
 
-        /* Confetti */
-        .confetti {
-            position: fixed;
-            width: 8px;
-            height: 8px;
-            top: -10px;
-            animation: fall linear infinite;
-            z-index: 20;
-        }
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
 
-        @keyframes fall {
-            to {
-                transform: translateY(110vh) rotate(360deg);
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.9rem;
-            }
-        }
-    </style>
+/* Responsive */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- Background Music -->
-    <audio id="music" loop>
-        <source src="love-music.mp3" type="audio/mpeg">
-    </audio>
+<!-- Background Music -->
+<audio id="music" loop>
+  <source src="love-music.mp3" type="audio/mpeg">
+</audio>
 
-    <div class="container">
-        <h4>To my special person and my love</h4>
-        <h1>I LOVE YOU SUBBI 💖</h1>
-        <button onclick="openLove()">Click for a Surprise 💝</button>
-    </div>
+<div class="container">
+  <h4>To my special person and my love</h4>
+  <h1>I LOVE YOU SUBBI 💖</h1>
+  <button onclick="openLove()">Click for a Surprise 💝</button>
+</div>
 
-    <div class="popup" id="popup">
-        <div class="card">
-            <img src="vab.dll\IMG-20250605-WA0015.jpg" alt="My Love">
-            <h2>Forever Us ❤️</h2>
-            <p>
-                Every heartbeat of mine whispers your name.
-                You are my today, my tomorrow, and my always.
-                I love you endlessly 💕
-            </p>
-            <button class="close" onclick="closeLove()">Close</button>
-        </div>
-    </div>
+<div class="popup" id="popup">
+  <div class="card">
+    <img src="your-photo.jpg" alt="My Love">
+    <h2>Forever Us ❤️</h2>
+    <p>
+      Every heartbeat of mine whispers your name.  
+      You are my today, my tomorrow, and my always.  
+      I love you endlessly 💕
+    </p>
+    <button class="close" onclick="closeLove()">Close</button>
+  </div>
+</div>
 
-    <script>
-        function openLove() {
-            document.getElementById("popup").style.display = "flex";
-            document.getElementById("music").play();
-            startConfetti();
-        }
+<script>
+function openLove() {
+  document.getElementById("popup").style.display = "flex";
+  document.getElementById("music").play();
+  startConfetti();
+}
 
-        function closeLove() {
-            document.getElementById("popup").style.display = "none";
-        }
+function closeLove() {
+  document.getElementById("popup").style.display = "none";
+}
 
-        /* Confetti */
-        function startConfetti() {
-            for (let i = 0; i < 50; i++) {
-                const confetti = document.createElement("div");
-                confetti.classList.add("confetti");
-                confetti.style.left = Math.random() * 100 + "vw";
-                confetti.style.background = `hsl(${Math.random() * 360},100%,70%)`;
-                confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
-                document.body.appendChild(confetti);
-                setTimeout(() => confetti.remove(), 5000);
-            }
-        }
+/* Confetti */
+function startConfetti() {
+  for (let i = 0; i < 50; i++) {
+    const confetti = document.createElement("div");
+    confetti.classList.add("confetti");
+    confetti.style.left = Math.random() * 100 + "vw";
+    confetti.style.background = `hsl(${Math.random() * 360},100%,70%)`;
+    confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
+    document.body.appendChild(confetti);
+    setTimeout(() => confetti.remove(), 5000);
+  }
+}
 
-        /* Floating Hearts */
-        setInterval(() => {
-            const heart = document.createElement("div");
-            heart.classList.add("heart");
-            heart.innerHTML = "💖";
-            heart.style.left = Math.random() * 100 + "vw";
-            heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
-            document.body.appendChild(heart);
-            setTimeout(() => heart.remove(), 6000);
-        }, 500);
-    </script>
+/* Floating Hearts */
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "💖";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 6000);
+}, 500);
+</script>
 
 </body>
-
 </html>
